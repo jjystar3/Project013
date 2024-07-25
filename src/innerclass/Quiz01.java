@@ -13,7 +13,7 @@ public class Quiz01 {
 		frame.setLayout(new FlowLayout());
 		frame.setBounds(500, 300, 500, 300);
 		frame.setVisible(true);
-
+		
 		// 프레임을 열고, 키를 누르면 -> "키를 눌렀습니다!" 출력
 //		frame.addKeyListener(new KeyEventHandler());
 
@@ -26,13 +26,11 @@ public class Quiz01 {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				// TODO Auto-generated method stub
 
 			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -40,24 +38,22 @@ public class Quiz01 {
 	}
 
 }
-
-class KeyEventHandler implements KeyListener {
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-		System.out.println("키를 눌렀습니다!");
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
+//
+//class KeyEventHandler implements KeyListener {
+//
+//	@Override
+//	public void keyTyped(KeyEvent e) {
+//		System.out.println("키를 눌렀습니다!");
+//	}
+//
+//	@Override
+//	public void keyPressed(KeyEvent e) {
+//
+//	}
+//
+//	@Override
+//	public void keyReleased(KeyEvent e) {
+//
+//	}
+//
+//}
