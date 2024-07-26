@@ -4,25 +4,25 @@ public class Quiz01 {
 
 	public static void main(String[] args) {
 
-//		MyNumber bigNum = new BiggerNumber();
-		
+		// 구현클래스
+		MyNumber bigNum = new BiggerNumber();
+		System.out.println(bigNum.max(4, 8));
+
 		// 익명클래스
-		MyNumber bigNum = new MyNumber() {
+		MyNumber bigNum1 = new MyNumber() {
 
 			@Override
 			public int max(int x, int y) {
 				return x > y ? x : y;
 			}
-			
+
 		};
-		
-		System.out.println(bigNum.max(4, 8));
-		
+		System.out.println(bigNum1.max(4, 8));
+
 		// 람다식 함수
-		MyNumber bigNum2 = (x, y) ->  x > y ? x : y;
-		
+		MyNumber bigNum2 = (x, y) -> x > y ? x : y;
 		System.out.println(bigNum2.max(7, 2));
-		
+
 	}
 
 }
@@ -37,7 +37,8 @@ class BiggerNumber implements MyNumber {
 
 	@Override
 	public int max(int x, int y) {
-		return x > y ? x : y; //삼항연산자
+		// 삼항연산자
+		return x > y ? x : y;
 	}
 
 }
