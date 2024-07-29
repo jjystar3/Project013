@@ -1,6 +1,7 @@
 package stream.quiz;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Quiz04 {
@@ -18,7 +19,7 @@ public class Quiz04 {
 		System.out.println("총 여행 비용: " + list.stream().map(s -> s.budget).reduce(0, (total, s) -> total + s));
 
 		System.out.println("== 20세 이상 고객 명단 ==");
-		list.stream().filter(s -> s.age > 20).map(s -> s.name + ", " + s.age).sorted().forEach(s -> System.out.println(s));
+		list.stream().sorted(Comparator.comparingInt(Customer::getAge)).filter(s -> s.age > 20).map(s -> s.name + ", " + s.age).forEach(s -> System.out.println(s));
 
 	}
 
@@ -34,4 +35,10 @@ class Customer {
 		this.age = age;
 		this.budget = budget;
 	}
+
+	public int getAge() {
+		return age;
+	}
+
+	
 }
