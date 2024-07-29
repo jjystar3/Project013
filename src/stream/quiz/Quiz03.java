@@ -19,18 +19,15 @@ public class Quiz03 {
 
 		System.out.println();
 
-		int priceSum = 0;
-		int orderSum = 0;
-		
-		priceSum = list.stream().filter(s -> s.year == 2022).map(s -> s.price).reduce(0, (total, s) -> total + s);
-		orderSum = (int) list.stream().filter(s -> s.year == 2022).count();
+		int sum1 = list.stream().filter(s -> s.year == 2022).mapToInt(s -> s.price).sum();
+		long count1 = list.stream().filter(s -> s.year == 2022).count();
 
-		System.out.println("총금액:" + priceSum + ", 거래건수:" + orderSum);
+		System.out.println("총금액:" + sum1 + ", 거래건수:" + count1);
 
-		priceSum = list.stream().filter(s -> s.year == 2023).map(s -> s.price).reduce(0, (total, s) -> total + s);
-		orderSum = (int) list.stream().filter(s -> s.year == 2023).count();
+		int sum2 = list.stream().filter(s -> s.year == 2023).mapToInt(s -> s.price).sum();
+		long count2 = list.stream().filter(s -> s.year == 2023).count();
 
-		System.out.println("총금액:" + priceSum + ", 거래건수:" + orderSum);
+		System.out.println("총금액:" + sum2 + ", 거래건수:" + count2);
 		
 	}
 

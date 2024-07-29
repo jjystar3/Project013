@@ -30,7 +30,8 @@ public class Quiz01 {
 		// 결과: 1
 		
 		Stream<String> stream3 = Arrays.stream(arr);
-		stream3.map(s -> s.length()).sorted().limit(1).forEach(s -> System.out.println(s));
+//		stream3.map(s -> s.length()).sorted().limit(1).forEach(s -> System.out.println(s));
+		System.out.println(stream3.mapToInt(s -> s.length()).min().getAsInt());
 		
 		// 4.중복을 제거한 리스트를 만드세요.
 		// 결과: [aaa, b, ccccc]
